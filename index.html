@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Partes de trabajo sin papel ni excel. PDF profesional, firma del cliente y env&#xED;o por WhatsApp en 30 segundos. Gratis para empezar.">
+<meta property="og:title" content="PartePro &#x2014; Partes de trabajo sin papel ni excel">
+<meta property="og:description" content="PDF profesional, firma del cliente y env&#xED;o por WhatsApp en 30 segundos. Olv&#xED;date del papel y del excel. Gratis para empezar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://partepro.com">
+<meta property="og:site_name" content="PartePro">
+<title>PartePro &#x2014; Partes de trabajo sin papel ni excel</title>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6JBB8KWGTL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6JBB8KWGTL');
+</script>
+<!-- Google Ads tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18084648074"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18084648074');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1E3A6E;
+  --green: #2ECC71;
+  --green-dark: #27ae60;
+  --bg: #F5F7FA;
+  --white: #FFFFFF;
+  --tx: #0F1923;
+  --tx2: #5A6A7E;
+  --bor: #E0E6EF;
+  --red: #E74C3C;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--white);
+  color: var(--tx);
+  overflow-x: hidden;
+}
+
+/* ── HERO STEPS ── */
+.hero-steps {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 48px auto 44px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: 20px;
+  padding: 28px 36px;
+  max-width: 700px;
+  box-shadow: 0 8px 40px rgba(30,58,110,.08);
+}
+.hero-step {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.hs-num {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 4px;
+}
+.hs-icon { font-size: 32px; }
+.hs-label {
+  font-size: 14px; font-weight: 600;
+  color: var(--navy); line-height: 1.3;
+}
+.hs-time {
+  font-size: 11px; font-weight: 600;
+  color: var(--green);
+  background: rgba(46,204,113,.1);
+  border-radius: 100px;
+  padding: 2px 10px;
+}
+.hero-arrow {
+  font-size: 22px;
+  color: var(--bor);
+  flex-shrink: 0;
+  font-weight: 300;
+}
+@media (max-width: 640px) {
+  .hero-steps {
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 16px;
+  }
+  .hero-arrow { transform: rotate(90deg); }
+  .hero-step { flex-direction: row; text-align: left; gap: 12px; }
+  .hs-num { flex-shrink: 0; }
+}
+
+/* ── NAVBAR ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 16px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bor);
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: var(--navy); text-decoration: none; }
+.logo span { color: var(--green); }
+.nav-cta {
+  background: var(--navy); color: #fff;
+  padding: 10px 22px; border-radius: 100px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none; transition: background .2s;
+}
+.nav-cta:hover { background: #162d57; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 120px 24px 80px;
+  text-align: center;
+  background: linear-gradient(160deg, #f0f4ff 0%, #ffffff 50%, #f0faf5 100%);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(46,204,113,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -150px; left: -150px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(30,58,110,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(46,204,113,0.12);
+  border: 1px solid rgba(46,204,113,0.3);
+  color: #1a9450;
+  padding: 6px 14px; border-radius: 100px;
+  font-size: 13px; font-weight: 600;
+  margin-bottom: 28px;
+  animation: fadeUp .6s ease both;
+}
+.badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 7vw, 72px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: var(--navy);
+  max-width: 780px;
+  margin-bottom: 24px;
+  animation: fadeUp .7s ease .1s both;
+}
+h1 em { color: var(--green); font-style: normal; }
+
+.hero-sub {
+  font-size: clamp(17px, 2.5vw, 21px);
+  color: var(--tx2);
+  max-width: 560px;
+  line-height: 1.6;
+  margin-bottom: 44px;
+  font-weight: 400;
+  animation: fadeUp .7s ease .2s both;
+}
+
+.hero-ctas {
+  display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+  margin-bottom: 56px;
+  animation: fadeUp .7s ease .3s both;
+}
+.btn-primary {
+  background: var(--green); color: #fff;
+  padding: 16px 36px; border-radius: 100px;
+  font-size: 17px; font-weight: 600;
+  text-decoration: none; transition: all .2s;
+  box-shadow: 0 8px 32px rgba(46,204,113,.35);
+}
+.btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(46,204,113,.45); }
+.btn-secondary {
+  background: transparent; color: var(--navy);
+  padding: 16px 36px; border-radius: 100px;
+  font-size: 17px; font-weight: 600;
+  text-decoration: none; transition: all .2s;
+  border: 2px solid var(--navy);
+}
+.btn-secondary:hover { background: var(--navy); color: #fff; }
+
+.hero-proof {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center;
+  font-size: 13px; color: var(--tx2);
+  animation: fadeUp .7s ease .4s both;
+}
+.proof-item { display: flex; align-items: center; gap: 6px; }
+.proof-item svg { color: var(--green); }
+
+/* ── APP MOCKUP ── */
+.mockup-wrap {
+  width: 100%; max-width: 900px;
+  margin: 0 auto 0;
+  padding: 0 24px;
+  animation: fadeUp .9s ease .5s both;
+}
+.mockup-phone {
+  background: var(--navy);
+  border-radius: 32px;
+  padding: 6px;
+  box-shadow: 0 40px 100px rgba(30,58,110,.25), 0 0 0 1px rgba(255,255,255,.1);
+  max-width: 340px;
+  margin: 0 auto;
+}
+.mockup-screen {
+  background: #EBF0F8;
+  border-radius: 27px;
+  overflow: hidden;
+  padding: 0;
+}
+.mock-topbar {
+  background: #fff;
+  padding: 14px 18px 10px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid #D5DCE8;
+}
+.mock-logo { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 800; color: var(--navy); }
+.mock-logo span { color: var(--green); }
+.mock-av { width: 28px; height: 28px; border-radius: 50%; background: #E8EEF8; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: var(--navy); }
+.mock-body { padding: 12px 14px; }
+.mock-card {
+  background: #fff; border-radius: 12px; border: 1px solid #D5DCE8;
+  padding: 12px 14px; margin-bottom: 8px;
+}
+.mock-card-enc {
+  border: 2px solid #E67E22;
+  background: linear-gradient(135deg,#fff,#fef2e5);
+}
+.mock-card-title { font-size: 13px; font-weight: 600; color: var(--tx); }
+.mock-card-sub { font-size: 11px; color: var(--tx2); margin-top: 2px; }
+.mock-card-amt { font-size: 15px; font-weight: 700; font-family: 'DM Mono', monospace; color: var(--navy); }
+.mock-chips { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
+.mock-chip { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 20px; }
+.chip-g { background: #E8F5F0; color: #1a9450; }
+.chip-a { background: #FEF2E5; color: #E67E22; }
+.chip-b { background: #E8EEF8; color: var(--navy); }
+.mock-badge { background: var(--green); color: #fff; border-radius: 10px; font-size: 9px; font-weight: 700; padding: 2px 6px; }
+.mock-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+.mock-stat { background: #fff; border-radius: 10px; border: 1px solid #D5DCE8; padding: 9px 11px; }
+.mock-stat-l { font-size: 9px; color: var(--tx2); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 2px; }
+.mock-stat-v { font-size: 18px; font-weight: 700; font-family: 'DM Mono', monospace; color: var(--navy); }
+.mock-btn-row { display: flex; gap: 6px; margin-top: 8px; }
+.mock-btn { padding: 6px 10px; border-radius: 7px; font-size: 10px; font-weight: 600; }
+.mbtn-g { background: var(--green); color: #fff; }
+.mbtn-w { background: #25D366; color: #fff; }
+.mbtn-b { background: #E8EEF8; color: var(--navy); }
+.mock-bnav {
+  background: #fff;
+  border-top: 1px solid #D5DCE8;
+  display: flex;
+  padding: 8px 0 12px;
+}
+.mock-nb { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.mock-ni { font-size: 16px; }
+.mock-nl { font-size: 9px; color: var(--tx2); font-weight: 500; }
+.mock-nb.on .mock-nl { color: var(--navy); }
+
+/* ── SECTIONS ── */
+section { padding: 100px 24px; }
+.container { max-width: 1100px; margin: 0 auto; }
+.section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--green);
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 800; line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+.section-sub {
+  font-size: 18px; color: var(--tx2); line-height: 1.6;
+  max-width: 560px;
+}
+
+/* ── DOLOR ── */
+.pain-section { background: var(--navy); color: #fff; }
+.pain-section .section-title { color: #fff; }
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-top: 56px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .pain-grid { grid-template-columns: 1fr; }
+}
+.pain-card {
+  background: rgba(255,255,255,.05);
+  padding: 36px 32px;
+  transition: background .2s;
+}
+.pain-card:hover { background: rgba(255,255,255,.08); }
+.pain-icon { font-size: 36px; margin-bottom: 16px; display: block; }
+.pain-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 10px; color: #fff; }
+.pain-text { font-size: 15px; color: rgba(255,255,255,.6); line-height: 1.6; }
+
+/* ── FEATURES ── */
+.features-section { background: var(--bg); }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 60px;
+}
+.feat-card {
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--bor);
+  padding: 36px 32px;
+  transition: all .25s;
+  position: relative; overflow: hidden;
+}
+.feat-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--navy));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .3s;
+}
+.feat-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,.08); }
+.feat-card:hover::before { transform: scaleX(1); }
+.feat-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  color: var(--green); margin-bottom: 20px;
+  display: block;
+}
+.feat-icon { font-size: 40px; margin-bottom: 16px; display: block; }
+.feat-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+.feat-text { font-size: 15px; color: var(--tx2); line-height: 1.7; }
+
+/* ── HOW IT WORKS ── */
+.steps-section { background: #fff; }
+.steps { display: flex; flex-direction: column; gap: 0; margin-top: 60px; max-width: 700px; }
+.step {
+  display: flex; gap: 32px; align-items: flex-start;
+  padding-bottom: 48px;
+  position: relative;
+}
+.step::after {
+  content: '';
+  position: absolute; left: 24px; top: 52px; bottom: 0;
+  width: 2px; background: linear-gradient(to bottom, var(--green), transparent);
+}
+.step:last-child::after { display: none; }
+.step-num {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--green); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 800;
+  flex-shrink: 0;
+}
+.step-content {}
+.step-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.step-text { font-size: 16px; color: var(--tx2); line-height: 1.6; }
+.step-time { display: inline-block; margin-top: 10px; background: #f0faf5; color: var(--green-dark); border-radius: 100px; padding: 4px 12px; font-size: 12px; font-weight: 600; }
+
+/* ── PRECIO ── */
+.pricing-section { background: var(--bg); }
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 56px;
+  max-width: 1100px;
+}
+.pricing-grid-future {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  max-width: 740px;
+}
+@media (max-width: 640px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-grid-future { grid-template-columns: 1fr; }
+}
+.price-card {
+  background: var(--white);
+  border-radius: 24px;
+  border: 1px solid var(--bor);
+  padding: 40px 36px;
+  position: relative;
+}
+.price-card.featured {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+.price-badge {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--green); color: #fff;
+  padding: 5px 18px; border-radius: 100px;
+  font-size: 12px; font-weight: 700;
+  white-space: nowrap;
+}
+.price-name { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--tx2); margin-bottom: 20px; }
+.price-card.featured .price-name { color: rgba(255,255,255,.6); }
+.price-amount { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 800; color: var(--navy); line-height: 1; margin-bottom: 4px; }
+.price-card.featured .price-amount { color: #fff; }
+.price-period { font-size: 14px; color: var(--tx2); margin-bottom: 28px; }
+.price-card.featured .price-period { color: rgba(255,255,255,.6); }
+.price-old { font-size: 14px; color: var(--tx2); text-decoration: line-through; margin-bottom: 4px; }
+.price-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+.price-features li { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--tx2); }
+.price-card.featured .price-features li { color: rgba(255,255,255,.8); }
+.price-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+.btn-price-main {
+  display: block; width: 100%;
+  background: var(--green); color: #fff;
+  padding: 15px; border-radius: 12px;
+  font-size: 16px; font-weight: 700;
+  text-align: center; text-decoration: none;
+  transition: all .2s;
+  box-shadow: 0 6px 24px rgba(46,204,113,.35);
+}
+.btn-price-main:hover { background: var(--green-dark); transform: translateY(-1px); }
+.btn-price-free {
+  display: block; width: 100%;
+  background: transparent; color: var(--navy);
+  padding: 15px; border-radius: 12px;
+  font-size: 16px; font-weight: 700;
+  text-align: center; text-decoration: none;
+  border: 2px solid var(--bor);
+  transition: all .2s;
+}
+.btn-price-free:hover { border-color: var(--navy); }
+
+/* ── SOCIAL PROOF ── */
+.proof-section { background: #fff; }
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+@media (max-width: 640px) {
+  .testimonials { grid-template-columns: 1fr; }
+}
+.testi {
+  background: var(--bg);
+  border-radius: 20px;
+  padding: 32px 28px;
+  position: relative;
+}
+.testi::before {
+  content: '"';
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  color: var(--green);
+  opacity: .3;
+  position: absolute;
+  top: 10px; left: 20px;
+  line-height: 1;
+}
+.testi-text { font-size: 16px; line-height: 1.7; color: var(--tx); margin-bottom: 20px; padding-top: 24px; }
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-av {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--navy); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700;
+  overflow: hidden; flex-shrink: 0;
+}
+.testi-av img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.testi-name { font-weight: 600; font-size: 14px; }
+.testi-job { font-size: 12px; color: var(--tx2); }
+
+/* ── FAQ ── */
+.faq-section { background: var(--bg); }
+.faqs { max-width: 720px; margin-top: 56px; display: flex; flex-direction: column; gap: 0; }
+.faq-item {
+  border-bottom: 1px solid var(--bor);
+  padding: 20px 0;
+}
+.faq-q {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; font-weight: 700; color: var(--navy);
+  cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px;
+  user-select: none;
+}
+.faq-icon { font-size: 22px; color: var(--green); flex-shrink: 0; transition: transform .25s; line-height: 1; }
+.faq-a {
+  font-size: 15px; color: var(--tx2); line-height: 1.7;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .4s ease, padding .4s ease;
+  padding-top: 0;
+}
+.faq-item.open .faq-a { max-height: 400px; padding-top: 14px; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+/* ── CTA FINAL ── */
+.cta-section {
+  background: linear-gradient(135deg, var(--navy) 0%, #162d57 100%);
+  text-align: center; padding: 120px 24px;
+  position: relative; overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(46,204,113,.12) 0%, transparent 70%);
+}
+.cta-section .section-title { color: #fff; max-width: 680px; margin: 0 auto 20px; }
+.cta-section .section-sub { color: rgba(255,255,255,.65); margin: 0 auto 44px; }
+.cta-gratis { font-size: 13px; color: rgba(255,255,255,.5); margin-top: 16px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--tx);
+  color: rgba(255,255,255,.5);
+  padding: 40px 24px;
+  text-align: center;
+  font-size: 13px;
+}
+footer a { color: rgba(255,255,255,.5); text-decoration: none; }
+footer .footer-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 12px; display: block; }
+footer .footer-logo span { color: var(--green); }
+
+/* ── STATS BAR ── */
+.stats-bar {
+  background: var(--white);
+  border-top: 1px solid var(--bor);
+  border-bottom: 1px solid var(--bor);
+  padding: 32px 24px;
+}
+.stats-inner {
+  max-width: 900px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  text-align: center; gap: 24px;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px; font-weight: 800;
+  color: var(--navy); line-height: 1;
+}
+.stat-label { font-size: 14px; color: var(--tx2); margin-top: 4px; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal { opacity: 1; transform: none; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  nav { padding: 14px 18px; }
+  .logo { font-size: 19px; }
+  .nav-cta { padding: 9px 18px; font-size: 13px; }
+  h1 { letter-spacing: -1px; }
+  .stats-inner { grid-template-columns: 1fr; gap: 20px; }
+  .hero-ctas { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-secondary { width: 100%; max-width: 320px; text-align: center; }
+  .pain-grid { border-radius: 16px; }
+  section { padding: 72px 20px; }
+}
+</style>
+
+<!-- Schema Markup: SoftwareApplication + Organization + FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "PartePro",
+      "url": "https://partepro.com",
+      "applicationUrl": "https://app.partepro.com",
+      "description": "App para autónomos de oficios que permite crear partes de trabajo digitales, recoger la firma del cliente, generar PDFs profesionales y controlar cobros. Todo desde el móvil en menos de 30 segundos.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Android, iOS, Web",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Freemium",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Hasta 30 partes y 30 presupuestos gratuitos"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro Founders",
+          "price": "7.99",
+          "priceCurrency": "EUR",
+          "description": "Partes y presupuestos ilimitados, cobros con tarjeta y SEPA, recordatorios automáticos"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "4"
+      },
+      "featureList": [
+        "Partes de trabajo digitales con firma del cliente",
+        "PDF profesional automático",
+        "Envío por WhatsApp",
+        "Control de cobros con semáforo de vencimientos",
+        "Recordatorios automáticos de pago",
+        "Presupuestos con conversión a parte",
+        "Funciona 100% sin internet",
+        "Cobro con tarjeta, Bizum y SEPA"
+      ],
+      "screenshot": "https://partepro.com/og-image.png",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "Organization",
+      "name": "PartePro",
+      "url": "https://partepro.com",
+      "logo": "https://partepro.com/logo.png",
+      "email": "hola@partepro.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lleida",
+        "addressRegion": "Cataluña",
+        "addressCountry": "ES"
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es PartePro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PartePro es una aplicación web para autónomos de oficios (electricistas, fontaneros, instaladores, reformistas) que permite crear partes de trabajo digitales, recoger la firma del cliente, generar PDFs profesionales, enviarlos por WhatsApp y controlar los cobros pendientes. Todo desde el móvil, en menos de 30 segundos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito instalar algo para usar PartePro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. PartePro funciona directamente desde el navegador de tu móvil en app.partepro.com. También puedes instalarlo en tu pantalla de inicio como si fuera una app nativa. Funciona en iPhone, Android y cualquier móvil moderno."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿PartePro funciona sin conexión a internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. PartePro funciona al 100% sin internet. Puedes crear partes, añadir fotos, generar PDFs, recoger firmas y gestionar cobros completamente offline. Solo necesitas conexión para enviar por WhatsApp o email."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es legal la firma digital del cliente en PartePro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La firma recogida en pantalla tiene validez legal como prueba de conformidad. Queda registrada junto con la fecha y hora exacta. Es el mismo sistema que usan empresas de logística y servicios técnicos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta PartePro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PartePro tiene un plan gratuito con hasta 30 partes y 30 presupuestos. El plan Pro Founders cuesta 7,99€/mes (IVA incluido) con precio bloqueado para siempre, e incluye partes ilimitados, cobro con tarjeta, SEPA y Bizum, y recordatorios automáticos por WhatsApp."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#" class="logo">Parte<span>Pro</span></a>
+  <a href="https://app.partepro.com" class="nav-cta">Empezar gratis →</a>
+</nav>
+
+<!-- BANNER BETA -->
+<div style="background:#1E3A6E;color:rgba(255,255,255,.9);text-align:center;padding:10px 20px;font-size:13px;font-family:'Plus Jakarta Sans',sans-serif;line-height:1.5;margin-top:57px">
+  🚧 <strong>App en desarrollo activo</strong> — Algunas funciones están en fase beta. Si encuentras algo raro, escríbenos a <a href="/cdn-cgi/l/email-protection#c4adaaa2ab84b4a5b6b0a1b4b6abeaa7aba9" style="color:rgba(255,255,255,.5)"><span class="__cf_email__" data-cfemail="7b12151d143b0b1a090f1e0b091455181416">[email&#160;protected]</span></a> y lo resolvemos en 24h</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">
+    <div class="badge-dot"></div>
+    Oferta Founders — 7,99€/mes (IVA incl.) para siempre · Solo 50 plazas
+  </div>
+
+  <h1>Parte hecho<br>Cliente firmado<br><em>WhatsApp enviado</em></h1>
+
+  <p class="hero-sub">En menos de 30 segundos. Sin complicaciones, sin papel, sin excusas. Solo abres el móvil y listo</p>
+
+  <div class="hero-ctas">
+    <a href="https://app.partepro.com" class="btn-primary">Empezar gratis — sin tarjeta</a>
+    <a href="#como-funciona" class="btn-secondary">Ver cómo funciona</a>
+  </div>
+
+  <!-- 3 PASOS VISUAL -->
+  <div class="hero-steps">
+    <div class="hero-step">
+      <div class="hs-num">1</div>
+      <div class="hs-icon">📝</div>
+      <div class="hs-label">Rellena el parte</div>
+      <div class="hs-time">~20 seg</div>
+    </div>
+    <div class="hero-arrow">→</div>
+    <div class="hero-step">
+      <div class="hs-num">2</div>
+      <div class="hs-icon">✍️</div>
+      <div class="hs-label">Cliente firma en tu móvil</div>
+      <div class="hs-time">~5 seg</div>
+    </div>
+    <div class="hero-arrow">→</div>
+    <div class="hero-step">
+      <div class="hs-num">3</div>
+      <div class="hs-icon">💬</div>
+      <div class="hs-label">PDF por WhatsApp</div>
+      <div class="hs-time">~5 seg</div>
+    </div>
+  </div>
+
+  <div class="hero-proof">
+    <div class="proof-item">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Sin registro complicado
+    </div>
+    <div class="proof-item">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      30 partes gratis
+    </div>
+    <div class="proof-item">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Solo desde el móvil
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar reveal">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num">30"</div>
+      <div class="stat-label">De media para crear un parte completo</div>
+    </div>
+    <div>
+      <div class="stat-num">0€</div>
+      <div class="stat-label">Para empezar, sin tarjeta de crédito</div>
+    </div>
+    <div>
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Desde el móvil, en obra o en el taller</div>
+    </div>
+  </div>
+</div>
+
+<!-- DOLOR -->
+<section class="pain-section">
+  <div class="container">
+    <p class="section-label" style="color:rgba(255,255,255,.5)">El problema</p>
+    <h2 class="section-title">¿Te suena alguna de estas?</h2>
+    <div class="pain-grid reveal">
+      <div class="pain-card">
+        <span class="pain-icon">😤</span>
+        <div class="pain-title">"No recuerdo haber acordado ese precio"</div>
+        <p class="pain-text">Sin parte firmado, el cliente siempre tiene razón. Y tú te quedas sin cobrar lo que es tuyo</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">🗂️</span>
+        <div class="pain-title">"¿Dónde apunté lo que hice en casa de Martínez?"</div>
+        <p class="pain-text">Papeles sueltos, notas en el móvil, WhatsApps enterrados. Cada cliente en un sitio diferente y nada organizado</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">📋</span>
+        <div class="pain-title">Partes en papel que nadie entiende</div>
+        <p class="pain-text">Letra a mano, fotocopias borrosas, archivos perdidos. Nada inspira confianza ni protege tus derechos</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-icon">⏳</span>
+        <div class="pain-title">Cobros que se eternizan</div>
+        <p class="pain-text">Sin control de vencimientos ni recordatorios, el dinero que ya ganaste tarda semanas en llegar</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <div class="container">
+    <p class="section-label">La solución</p>
+    <h2 class="section-title reveal">Todo lo que necesitas<br>Nada que no necesitas</h2>
+    <p class="section-sub reveal">Diseñado con autónomos reales para que funcione en obra, en el taller y en el furgón</p>
+    <div class="features-grid">
+      <div class="feat-card reveal">
+        <span class="feat-num">01</span>
+        <span class="feat-icon">📄</span>
+        <div class="feat-title">PDF profesional instantáneo</div>
+        <p class="feat-text">Con tu nombre, NIF, logo y datos del cliente. El parte queda como el de cualquier empresa grande — aunque trabajes solo</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">02</span>
+        <span class="feat-icon">📸</span>
+        <div class="feat-title">Fotos del trabajo incluidas</div>
+        <p class="feat-text">Hasta 5 fotos por parte directamente desde la cámara. Se incluyen automáticamente en el PDF con índice y fecha. El cliente no puede decir "esto no estaba así"</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">03</span>
+        <span class="feat-icon">✍️</span>
+        <div class="feat-title">Firma digital del cliente</div>
+        <p class="feat-text">El cliente firma en tu móvil en el momento. Queda grabado en el PDF. Se acabaron los "yo no he dicho eso"</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">04</span>
+        <span class="feat-icon">💬</span>
+        <div class="feat-title">WhatsApp en un toque</div>
+        <p class="feat-text">Envías el PDF directamente al cliente por WhatsApp o email. Con el importe, los datos de pago y todo ya rellenado</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">05</span>
+        <span class="feat-icon">💰</span>
+        <div class="feat-title">Cobra más rápido — 6 métodos</div>
+        <p class="feat-text">Bizum, transferencia, SEPA, tarjeta, efectivo o tarjeta física. Semáforo de vencimientos con recordatorios automáticos por WhatsApp. Ves de un vistazo quién te debe y cuánto</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">06</span>
+        <span class="feat-icon">📊</span>
+        <div class="feat-title">Presupuestos que se convierten en partes</div>
+        <p class="feat-text">Crea presupuestos con líneas de trabajo, IVA y señal. Cuando el cliente acepta, se convierte en parte automáticamente. Historial de versiones para evitar malentendidos</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">07</span>
+        <span class="feat-icon">🔨</span>
+        <div class="feat-title">Parte en Curso — varios días</div>
+        <p class="feat-text">Para reformas y obras largas. Vas añadiendo días con horas, materiales y desplazamiento. Al cerrar, genera el PDF consolidado con desglose por día</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">08</span>
+        <span class="feat-icon">📶</span>
+        <div class="feat-title">Funciona 100% sin internet</div>
+        <p class="feat-text">Crea partes, fotos, presupuestos, firmas y PDFs completamente offline. En una obra no hay WiFi — PartePro funciona igual. Se sincroniza cuando tengas conexión</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps-section" id="como-funciona">
+  <div class="container">
+    <p class="section-label">Cómo funciona</p>
+    <h2 class="section-title reveal">De la obra al cobro<br>en 3 pasos</h2>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Rellena el parte</div>
+          <p class="step-text">Cliente, descripción, horas, materiales y desplazamiento. PartePro calcula el total con IVA automáticamente</p>
+          <span class="step-time">⏱ 20 segundos</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">El cliente firma en tu móvil</div>
+          <p class="step-text">Le das el teléfono, firma con el dedo. La firma queda incrustada en el PDF. Prueba legal irrefutable</p>
+          <span class="step-time">⏱ 5 segundos</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Envía y cobra</div>
+          <p class="step-text">PDF por WhatsApp o email en un toque. PartePro activa el recordatorio de cobro automáticamente cuando vence</p>
+          <span class="step-time">⏱ 5 segundos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="proof-section">
+  <div class="container">
+    <p class="section-label">Primeros usuarios</p>
+    <h2 class="section-title reveal">Lo que dicen<br>los que ya lo usan</h2>
+    <div class="testimonials">
+      <div class="testi reveal">
+        <p class="testi-text">Antes tardaba 20 minutos en hacer una factura en Word. Ahora en 30 segundos el cliente tiene el parte en el móvil y yo tengo su firma. No hay vuelta atrás</p>
+        <div class="testi-author">
+          <div class="testi-av"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jordi R" loading="lazy"></div>
+          <div>
+            <div class="testi-name">Jordi R</div>
+            <div class="testi-job">Electricista, Barcelona</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi reveal">
+        <p class="testi-text">Un cliente me intentó decir que habíamos acordado menos precio. Le mostré el parte con su firma en el móvil. No volvió a intentarlo</p>
+        <div class="testi-author">
+          <div class="testi-av"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Marcos P" loading="lazy"></div>
+          <div>
+            <div class="testi-name">Marcos P</div>
+            <div class="testi-job">Fontanero, Madrid</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi reveal">
+        <p class="testi-text">El módulo de cobros me ha cambiado la vida. Sé exactamente qué me deben y cuándo. Y el recordatorio por WhatsApp funciona mejor que llamar yo</p>
+        <div class="testi-author">
+          <div class="testi-av"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Laura G" loading="lazy"></div>
+          <div>
+            <div class="testi-name">Laura G</div>
+            <div class="testi-job">Técnica de mantenimiento, Valencia</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi reveal">
+        <p class="testi-text">Antes perdía presupuestos, no sabía cuáles estaban pendientes ni cuáles habían aceptado. Ahora lo veo todo de un vistazo y el presupuesto se convierte en parte solo. Una locura</p>
+        <div class="testi-author">
+          <div class="testi-av"><img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Antonio C" loading="lazy"></div>
+          <div>
+            <div class="testi-name">Antonio C</div>
+            <div class="testi-job">Instalador climatización, Sevilla</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="precios">
+  <div class="container">
+    <p class="section-label">Precios</p>
+    <h2 class="section-title reveal">Empieza gratis<br>Crece cuando quieras</h2>
+    <p class="section-sub reveal">Sin permanencia. Sin letra pequeña. <strong>El precio que eliges hoy es el que pagas para siempre</strong> mientras no te des de baja</p>
+
+    <!-- PRECIO PARA SIEMPRE BANNER -->
+    <div style="grid-column:1/-1;background:linear-gradient(135deg,rgba(30,58,110,.06),rgba(46,204,113,.08));border:2px solid rgba(46,204,113,.3);border-radius:16px;padding:24px 28px;font-size:15px;color:var(--tx);display:flex;align-items:center;gap:16px;margin-top:40px;max-width:1100px">
+      <span style="font-size:32px;flex-shrink:0">🔒</span>
+      <div><strong style="color:var(--navy);font-size:17px">Tu precio queda bloqueado para siempre.</strong><br>Da igual que mañana subamos a 14,99€ o a 29,99€. Si entras ahora, pagas lo de ahora. Para toda la vida. Sin truco, sin letra pequeña. Si te das de baja y vuelves, pagarás el precio vigente en ese momento</div>
+    </div>
+
+    <div class="pricing-grid" style="margin-top:32px">
+      <!-- FREEMIUM -->
+      <div class="price-card reveal">
+        <div class="price-name">Freemium</div>
+        <div class="price-amount">0€</div>
+        <div class="price-period">para siempre</div>
+        <p style="font-size:13px;color:var(--green-dark);font-weight:600;margin-bottom:16px;background:rgba(46,204,113,.08);padding:8px 12px;border-radius:8px;text-align:center">Todas las funciones del plan Pro, limitado a 30 partes</p>
+        <ul class="price-features">
+          <li>Hasta 30 partes de trabajo</li>
+          <li>Hasta 30 presupuestos</li>
+          <li>Hasta 5 fotos por parte</li>
+          <li>PDF profesional con firma digital</li>
+          <li>WhatsApp y Email</li>
+          <li>Control de cobros ilimitado</li>
+          <li>Funciona 100% sin internet</li>
+        </ul>
+        <a href="https://app.partepro.com" class="btn-price-free">Empezar gratis</a>
+      </div>
+
+      <!-- FOUNDERS -->
+      <div class="price-card featured reveal">
+        <div class="price-badge">🔥 Founders — Quedan pocas plazas de 50</div>
+        <div class="price-name">Pro · Founders</div>
+        <div class="price-old">14,99€/mes</div>
+        <div class="price-amount">7,99€</div>
+        <div class="price-period">/mes (IVA incl.) · <strong>para siempre</strong></div>
+        <ul class="price-features">
+          <li>Partes y presupuestos ilimitados</li>
+          <li>Todo lo del plan Freemium</li>
+          <li>Cobro con tarjeta, SEPA, Bizum, transferencia</li>
+          <li>Recordatorios automáticos por WhatsApp</li>
+          <li>Soporte prioritario por WhatsApp</li>
+          <li>Acceso anticipado a funciones nuevas</li>
+        </ul>
+        <a href="https://buy.stripe.com/14A6oJ614dn41Vq8EX1VK00" class="btn-price-main">Suscribirme por 7,99€/mes →</a>
+        <p style="text-align:center;font-size:12px;color:rgba(255,255,255,.5);margin-top:10px">Precio bloqueado para siempre</p>
+      </div>
+
+      <!-- EARLY BIRD -->
+      <div class="price-card reveal" style="opacity:.75;position:relative">
+        <div style="position:absolute;top:16px;right:16px;background:#E8EEF8;color:var(--navy);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px">PRÓXIMAMENTE</div>
+        <div class="price-name">Pro · Early Bird</div>
+        <div class="price-old">14,99€/mes</div>
+        <div class="price-amount">9,99€</div>
+        <div class="price-period">/mes (IVA incl.) · <strong>para siempre</strong></div>
+        <ul class="price-features">
+          <li>Todo lo del plan Founders</li>
+          <li>Plazas 51–150</li>
+          <li>Mismo producto, mismo servicio</li>
+          <li>Pero 2€/mes más caro</li>
+        </ul>
+        <div class="btn-price-free" style="pointer-events:none;opacity:.5;text-align:center">Disponible cuando se agoten los Founders</div>
+      </div>
+
+    </div><!-- end pricing-grid -->
+
+    <!-- FILA 2: Plans futurs -->
+    <div class="pricing-grid-future">
+      <!-- EARLY ADOPTER -->
+      <div class="price-card reveal" style="opacity:.55;position:relative">
+        <div style="position:absolute;top:16px;right:16px;background:#E8EEF8;color:var(--navy);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px">PRÓXIMAMENTE</div>
+        <div class="price-name">Pro · Early Adopter</div>
+        <div class="price-old">14,99€/mes</div>
+        <div class="price-amount">12,99€</div>
+        <div class="price-period">/mes (IVA incl.) · <strong>para siempre</strong></div>
+        <ul class="price-features">
+          <li>Todo lo del plan Founders</li>
+          <li>Plazas 151–300</li>
+          <li>Mismo producto, mismo servicio</li>
+          <li>Pero 5€/mes más caro</li>
+        </ul>
+        <div class="btn-price-free" style="pointer-events:none;opacity:.5;text-align:center">Disponible más adelante</div>
+      </div>
+
+      <!-- STANDARD -->
+      <div class="price-card reveal" style="opacity:.4;position:relative">
+        <div style="position:absolute;top:16px;right:16px;background:#E8EEF8;color:var(--navy);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px">PRECIO FINAL</div>
+        <div class="price-name">Pro · Standard</div>
+        <div class="price-amount">14,99€</div>
+        <div class="price-period">/mes (IVA incl.) · <strong>para siempre</strong></div>
+        <ul class="price-features">
+          <li>Todo lo del plan Founders</li>
+          <li>Plazas 300+</li>
+          <li>Mismo producto, mismo servicio</li>
+          <li>Pero 7€/mes más caro</li>
+        </ul>
+        <div class="btn-price-free" style="pointer-events:none;opacity:.5;text-align:center">Precio estándar definitivo</div>
+      </div>
+    </div><!-- end pricing-grid-future -->
+
+    <!-- URGENCIA -->
+    <div style="text-align:center;margin-top:32px;padding:20px;background:rgba(231,76,60,.06);border:1px solid rgba(231,76,60,.2);border-radius:14px;max-width:700px;margin-left:auto;margin-right:auto">
+      <p style="font-size:16px;font-weight:700;color:var(--red);margin-bottom:6px">El precio sube con cada fase. No baja nunca.</p>
+      <p style="font-size:14px;color:var(--tx2)">Los primeros 50 pagan 7,99€ para siempre. Los siguientes 100 pagarán 9,99€. Después 12,99€. Y finalmente el precio estándar: 14,99€/mes. <strong>Cuanto antes entres, menos pagas — para toda la vida.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+  <div class="container">
+    <p class="section-label">Preguntas frecuentes</p>
+    <h2 class="section-title reveal">Resolvemos tus dudas</h2>
+    <div class="faqs reveal">
+      <!-- GENERAL -->
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Qué es PartePro exactamente?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">PartePro es una aplicación web para autónomos de oficios (electricistas, fontaneros, instaladores, reformistas) que permite crear partes de trabajo digitales, recoger la firma del cliente, generar PDFs profesionales, enviarlos por WhatsApp y controlar los cobros pendientes. Todo desde el móvil, en menos de 30 segundos</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Necesito instalar algo?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">No. PartePro funciona directamente desde el navegador de tu móvil. Abre app.partepro.com y ya está. También puedes "instalarla" en tu pantalla de inicio como si fuera una app nativa — te aparecerá un botón para hacerlo. Funciona en iPhone, Android, Samsung y cualquier móvil moderno</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Funciona sin conexión a internet?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Sí, PartePro funciona al 100% sin internet. Puedes crear partes, añadir fotos, generar PDFs, recoger firmas, crear presupuestos y gestionar cobros completamente offline. Solo necesitas conexión para enviar por WhatsApp o email — pero puedes hacerlo después, cuando salgas de la obra. Es la única app del mercado que funciona completamente sin WiFi</div>
+      </div>
+
+      <!-- FIRMA Y PDF -->
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Es legal la firma digital del cliente?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Sí. La firma recogida en pantalla tiene validez legal como prueba de conformidad. Queda registrada junto con la fecha y hora exacta en que se firmó. Es el mismo sistema que usan empresas de logística, reparaciones y servicios técnicos. En caso de disputa, tienes la firma con fecha/hora, el desglose del trabajo y las fotos — todo en un PDF profesional</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Y la firma del técnico?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">La firma del técnico se puede configurar una sola vez en los ajustes de la app. Una vez guardada, se adjunta automáticamente a cada parte que generes, sin tener que volver a firmar cada vez. Así el PDF sale con las dos firmas: la tuya (del técnico) y la del cliente</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Qué incluye el PDF que se genera?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">El PDF incluye: datos de tu empresa (nombre, NIF, teléfono, dirección), datos del cliente, descripción del trabajo, desglose de horas y materiales, desplazamiento, subtotal con IVA desglosado, método de pago, firma del técnico, firma del cliente y — si has añadido fotos — una página completa con las fotos del trabajo indexadas y fechadas. Parece el de una empresa grande, aunque trabajes solo</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Puedo añadir fotos al parte de trabajo?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Sí. Puedes añadir hasta 5 fotos por parte directamente desde la cámara de tu móvil. Las fotos se comprimen automáticamente para no ocupar espacio y se incluyen en el PDF en una página dedicada, con borde, índice y fecha. Es la prueba visual perfecta: el cliente no puede decir "esto no estaba así" cuando tiene las fotos firmadas en el documento</div>
+      </div>
+
+      <!-- COBROS Y PAGOS -->
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Cómo funciona el control de cobros?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Cada vez que creas un parte, PartePro genera automáticamente un registro de cobro con el importe y la fecha de vencimiento. En tu pantalla ves un semáforo: verde (pendiente), naranja (vence hoy), rojo (vencido con los días de retraso). Con un toque envías un recordatorio por WhatsApp al cliente con todos los datos de pago incluidos. Sabes exactamente quién te debe, cuánto y desde cuándo</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Qué métodos de pago soporta?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">PartePro soporta 6 métodos de pago: Bizum, transferencia bancaria, domiciliación SEPA, tarjeta de crédito/débito (vía Stripe), efectivo y tarjeta física. El recordatorio de cobro que se envía por WhatsApp incluye automáticamente los datos del método elegido (número de Bizum, IBAN, link de pago con tarjeta, etc.)</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Puedo cobrar con tarjeta a mis clientes?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Sí, con el plan Pro. PartePro genera un link de pago seguro (vía Stripe) que envías al cliente por WhatsApp. El cliente paga desde su móvil y tú recibes el dinero directamente en tu cuenta. La comisión es transparente: 1,5% + 0,50€ por transacción. Ves el desglose exacto antes de enviar el cobro</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Cómo funciona el cobro por SEPA?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">El cobro por SEPA (domiciliación bancaria) es la opción más económica: solo 0,50€ + 0,1% por transacción — mucho más barato que tarjeta. El proceso es seguro: el cliente firma un mandato SEPA directamente en la app, con verificación automática del IBAN. Una vez firmado, tú puedes cobrar directamente de su cuenta bancaria. El mandato tiene plenas garantías legales: es un adeudo autorizado y el cliente no puede devolver el recibo unilateralmente como ocurre con las domiciliaciones tradicionales. Ideal para clientes recurrentes o importes altos</div>
+      </div>
+
+      <!-- PRESUPUESTOS -->
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Cómo funcionan los presupuestos?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Creas un presupuesto con líneas de trabajo (concepto, cantidad, precio unitario), eliges el IVA y opcionalmente una señal (30%, 50% o lo que quieras). Se genera un PDF profesional que envías por WhatsApp o email. Cuando el cliente acepta, puedes convertirlo en parte de trabajo con un solo toque — sin volver a escribir nada. Además, PartePro guarda un historial de versiones para que nunca pierdas qué presupuesto aceptó el cliente</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿La señal del presupuesto se descuenta del precio final?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Sí. Cuando configuras una señal (30%, 50% o un porcentaje personalizado) en el presupuesto, el PDF muestra claramente el importe de la señal y el resto pendiente de pago. Cuando el presupuesto se convierte en parte, el importe de la señal se descuenta automáticamente del total a cobrar. El cliente ve exactamente cuánto ha adelantado y cuánto le queda por pagar</div>
+      </div>
+
+      <!-- PARTES EN CURSO -->
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Qué es un "Parte en Curso"?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Es un parte de trabajo para proyectos de varios días, como reformas u obras largas. Vas añadiendo días progresivamente: horas trabajadas, materiales, desplazamiento y notas de cada jornada. Cuando terminas, lo cierras con una sola firma del cliente y se genera un PDF consolidado con el desglose completo por día. Puedes tener varios Partes en Curso simultáneos para diferentes obras</div>
+      </div>
+
+      <!-- PLANES Y PRECIOS -->
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Qué puedo hacer con el plan gratuito?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">El plan gratuito incluye exactamente las mismas funcionalidades que el plan de pago — no es una versión recortada. Tienes: partes con fotos, firma digital del cliente con fecha y hora, PDF profesional, envío por WhatsApp y email, presupuestos con señal, partes en curso de varios días, control de cobros ilimitado y funciona 100% offline. La única diferencia es el límite: 30 partes y 30 presupuestos. Cuando los superes, pasas a Pro para tener todo ilimitado</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿El precio de Founders es para siempre de verdad?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Sí, de verdad. Si te suscribes ahora a 7,99€/mes, ese es tu precio para toda la vida mientras mantengas la suscripción. Da igual que mañana subamos a 14,99€ o a 29,99€: tú sigues pagando 7,99€. Sin trucos, sin letra pequeña. Lo mismo aplica a las fases siguientes: si entras a 9,99€ o 12,99€, ese será tu precio para siempre. El único caso en que podría variar es si cambia el IVA estatal, ya que el precio incluye IVA y esto depende de la legislación vigente</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Qué pasa si cancelo el plan Pro?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Vuelves al plan Freemium con todos tus datos intactos — no pierdes nada. Pero si en el futuro quieres volver a Pro, pagarás el precio vigente en ese momento, no el que tenías antes. Por eso merece la pena entrar ahora: bloqueas el precio más bajo para siempre</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Puedo usar PartePro para varios clientes y obras a la vez?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Sí. Tienes una ficha por cliente con todos sus datos (nombre, DNI, teléfono, email, dirección), historial de partes, control de cobros individual y la posibilidad de tener múltiples Partes en Curso simultáneos. En el dashboard ves de un vistazo: cuántos partes has hecho, cuánto te deben en total y qué cobros están vencidos</div>
+      </div>
+
+      <!-- CONTABILIDAD -->
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Los partes quedan registrados para mi contabilidad?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Sí. Todos los partes quedan guardados con la fecha, el importe, los datos del cliente y la firma. Puedes pasarlos a tu programa de contabilidad cada noche o acumularlos y hacerlo el fin de semana — como prefieras. Tienes un filtro por fecha para encontrar rápidamente los partes de cualquier día, y un botón para marcar cada parte como "Facturado" una vez que lo hayas introducido en tu programa. Así sabes siempre qué partes faltan por contabilizar</div>
+      </div>
+
+      <!-- SEGURIDAD Y DATOS -->
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Mis datos están seguros?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Sí. Tus datos se guardan en tu móvil y, si te registras, se sincronizan con nuestro servidor seguro en Europa (cifrado en tránsito y en reposo). Solo tú puedes acceder a tu cuenta. No compartimos datos con terceros y cumplimos con la normativa RGPD</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿PartePro es una app de facturación?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">No. PartePro es una herramienta de documentación de trabajos y gestión de cobros. No genera facturas fiscales ni sustituye a tu programa de contabilidad. Lo que hace es ayudarte a cerrar cada trabajo de forma profesional (con firma, fotos y PDF) y a cobrar más rápido. Es el paso previo a la factura: documentas el trabajo, el cliente firma, y luego generas la factura con tu herramienta habitual</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          ¿Puedo dar acceso a mis trabajadores?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Todavía no, pero estamos trabajando en ello. Próximamente PartePro tendrá modo multiusuario: el autónomo o la empresa podrá crear cuentas para sus trabajadores, cada uno con su propio acceso desde su móvil. Tú verás todos los partes, presupuestos y cobros centralizados. Cada usuario adicional tendrá un coste aparte (precio por definir). Si eres Founder, tendrás acceso prioritario a esta función y condiciones especiales cuando se lance</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="container" style="position:relative;z-index:1;text-align:center">
+    <p class="section-label">Empieza hoy</p>
+    <h2 class="section-title reveal">El próximo parte que hagas,<br>hazlo bien</h2>
+    <p class="section-sub reveal" style="margin:0 auto 44px">30 partes gratis. Sin tarjeta. Sin trampa. Si te gusta, sigues por 7,99€/mes (IVA incl.) con precio bloqueado para siempre</p>
+    <a href="https://app.partepro.com" class="btn-primary" style="font-size:18px;padding:18px 48px">Empezar gratis ahora →</a>
+    <p class="cta-gratis">Sin tarjeta de crédito · Cancela cuando quieras · Precio Founders bloqueado</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Parte<span>Pro</span></span>
+  <p style="margin-bottom:8px">El parte de trabajo profesional para autónomos</p>
+  <p><a href="/cdn-cgi/l/email-protection#92fbfcf4fdd2e2f3e0e6f7e2e0fdbcf1fdff" style="color:rgba(255,255,255,.5)"><span class="__cf_email__" data-cfemail="573e3931381727362523322725387934383a">[email&#160;protected]</span></a> · <a href="https://partepro.com" style="color:rgba(255,255,255,.5)">partepro.com</a></p>
+  <p style="margin-top:16px;font-size:12px;opacity:.7">
+    <a href="/aviso-legal" style="color:rgba(255,255,255,.5);text-decoration:none">Aviso Legal</a>
+    &nbsp;·&nbsp;
+    <a href="/privacidad" style="color:rgba(255,255,255,.5);text-decoration:none">Política de Privacidad</a>
+    &nbsp;·&nbsp;
+    <a href="/terminos" style="color:rgba(255,255,255,.5);text-decoration:none">Términos y Condiciones</a>
+    &nbsp;·&nbsp;
+    <a href="/cookies" style="color:rgba(255,255,255,.5);text-decoration:none">Política de Cookies</a>
+  </p>
+  <p style="margin-top:10px;font-size:11px;opacity:.4">© 2026 PartePro · Lleida</p>
+</footer>
+
+
+<!-- Banner cookies -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1E3A6E;color:#fff;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:9999;font-size:13px;flex-wrap:wrap">
+  <span>Usamos cookies propias y de Google Analytics para mejorar el servicio. <a href="/cookies" style="color:#2ECC71;text-decoration:none">Más info</a></span>
+  <div style="display:flex;gap:8px;flex-shrink:0">
+    <button id="ck-accept" style="background:#2ECC71;color:#fff;border:none;border-radius:8px;padding:7px 16px;font-size:13px;font-weight:600;cursor:pointer">Aceptar</button>
+    <button id="ck-reject" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);border-radius:8px;padding:7px 14px;font-size:13px;cursor:pointer">Rechazar</button>
+  </div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// FAQ toggle
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=this.parentElement;
+    var wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+
+// Cookies
+(function(){
+  var b=document.getElementById('cookie-banner');
+  if(localStorage.getItem('pp-cookies-ok')){b.style.display='none';return;}
+  b.style.display='flex';
+  document.getElementById('ck-accept').onclick=function(){b.style.display='none';localStorage.setItem('pp-cookies-ok','1');};
+  document.getElementById('ck-reject').onclick=function(){b.style.display='none';localStorage.setItem('pp-cookies-ok','0');};
+})();
+</script>
+<script data-cfasync="false" src="/cdn-cgi/scrip
