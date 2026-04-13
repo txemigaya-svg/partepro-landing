@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Partes de trabajo sin papel ni excel. PDF profesional, firma del cliente y env&#xED;o por WhatsApp en 30 segundos. Gratis para empezar.">
+<meta name="description" content="Partes de trabajo sin papel ni excel. PDF profesional, firma digital, fotos de obra, cobros con tarjeta y SEPA, y env&#xED;o por WhatsApp en 30 segundos. Gratis para empezar.">
 <meta property="og:title" content="PartePro &#x2014; Partes de trabajo sin papel ni excel">
-<meta property="og:description" content="PDF profesional, firma del cliente y env&#xED;o por WhatsApp en 30 segundos. Olv&#xED;date del papel y del excel. Gratis para empezar.">
+<meta property="og:description" content="PDF profesional, firma digital, fotos de obra, cobros con tarjeta y SEPA, y env&#xED;o por WhatsApp en 30 segundos. Gratis para empezar.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://partepro.com">
 <meta property="og:site_name" content="PartePro">
@@ -641,13 +641,16 @@ footer .footer-logo span { color: var(--green); }
       },
       "featureList": [
         "Partes de trabajo digitales con firma del cliente",
-        "PDF profesional automático",
-        "Envío por WhatsApp",
-        "Control de cobros con semáforo de vencimientos",
-        "Recordatorios automáticos de pago",
-        "Presupuestos con conversión a parte",
+        "PDF profesional autom&#xE1;tico con fotos de obra",
+        "Env&#xED;o por WhatsApp",
+        "Cobrar Ahora: link de pago con tarjeta o SEPA por WhatsApp",
+        "Control de cobros con sem&#xE1;foro de vencimientos",
+        "Domiciliaci&#xF3;n SEPA con mandato digital eIDAS",
+        "Recordatorios y alertas autom&#xE1;ticas de pago",
+        "Presupuestos con conversi&#xF3;n a parte",
+        "Fotos de obra durante y al cerrar el parte",
         "Funciona 100% sin internet",
-        "Cobro con tarjeta, Bizum y SEPA"
+        "Cobro con tarjeta, Bizum, SEPA y transferencia"
       ],
       "screenshot": "https://partepro.com/og-image.png",
       "inLanguage": "es"
@@ -720,7 +723,10 @@ footer .footer-logo span { color: var(--green); }
 <!-- NAVBAR -->
 <nav>
   <a href="#" class="logo">Parte<span>Pro</span></a>
-  <a href="https://app.partepro.com" class="nav-cta">Empezar gratis →</a>
+  <div style="display:flex;align-items:center;gap:16px">
+    <a href="/blog" style="font-size:14px;font-weight:600;color:var(--navy);text-decoration:none">Blog</a>
+    <a href="https://app.partepro.com" class="nav-cta">Empezar gratis &#x2192;</a>
+  </div>
 </nav>
 
 <!-- BANNER BETA -->
@@ -847,8 +853,8 @@ footer .footer-logo span { color: var(--green); }
       <div class="feat-card reveal">
         <span class="feat-num">02</span>
         <span class="feat-icon">📸</span>
-        <div class="feat-title">Fotos del trabajo incluidas</div>
-        <p class="feat-text">Hasta 5 fotos por parte directamente desde la cámara. Se incluyen automáticamente en el PDF con índice y fecha. El cliente no puede decir "esto no estaba así"</p>
+        <div class="feat-title">Fotos de obra — antes, durante y después</div>
+        <p class="feat-text">Hasta 5 fotos por parte directamente desde la cámara. Añádelas mientras trabajas o al cerrar. Se incluyen en el PDF con fecha. El cliente no puede decir "esto no estaba así"</p>
       </div>
       <div class="feat-card reveal">
         <span class="feat-num">03</span>
@@ -858,30 +864,42 @@ footer .footer-logo span { color: var(--green); }
       </div>
       <div class="feat-card reveal">
         <span class="feat-num">04</span>
-        <span class="feat-icon">💬</span>
-        <div class="feat-title">WhatsApp en un toque</div>
-        <p class="feat-text">Envías el PDF directamente al cliente por WhatsApp o email. Con el importe, los datos de pago y todo ya rellenado</p>
+        <span class="feat-icon">💳</span>
+        <div class="feat-title">Cobrar Ahora — link de pago al instante</div>
+        <p class="feat-text">Genera un link de pago con tarjeta o SEPA y envíalo por WhatsApp. El cliente paga desde su móvil. Tú recibes el dinero en tu cuenta Stripe. Sin perseguir a nadie</p>
       </div>
       <div class="feat-card reveal">
         <span class="feat-num">05</span>
-        <span class="feat-icon">💰</span>
-        <div class="feat-title">Cobra más rápido — 6 métodos</div>
-        <p class="feat-text">Bizum, transferencia, SEPA, tarjeta, efectivo o tarjeta física. Semáforo de vencimientos con recordatorios automáticos por WhatsApp. Ves de un vistazo quién te debe y cuánto</p>
+        <span class="feat-icon">💬</span>
+        <div class="feat-title">WhatsApp en un toque</div>
+        <p class="feat-text">Envías el PDF, el link de pago o el recordatorio directamente al cliente por WhatsApp. Con el importe, los datos de pago y todo ya rellenado</p>
       </div>
       <div class="feat-card reveal">
         <span class="feat-num">06</span>
+        <span class="feat-icon">💰</span>
+        <div class="feat-title">Control de cobros con semáforo</div>
+        <p class="feat-text">Bizum, transferencia, SEPA, tarjeta o efectivo. Semáforo de vencimientos con recordatorios automáticos. Alertas si un pago SEPA falla. Ves de un vistazo quién te debe</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">07</span>
+        <span class="feat-icon">🏛️</span>
+        <div class="feat-title">Domiciliación SEPA con mandato digital</div>
+        <p class="feat-text">Cobra por domiciliación bancaria con mandato SEPA legal incluido en el PDF. El cliente firma y autoriza el cargo automático. Conforme al Reglamento eIDAS (UE) 910/2014</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">08</span>
         <span class="feat-icon">📊</span>
         <div class="feat-title">Presupuestos que se convierten en partes</div>
         <p class="feat-text">Crea presupuestos con líneas de trabajo, IVA y señal. Cuando el cliente acepta, se convierte en parte automáticamente. Historial de versiones para evitar malentendidos</p>
       </div>
       <div class="feat-card reveal">
-        <span class="feat-num">07</span>
+        <span class="feat-num">09</span>
         <span class="feat-icon">🔨</span>
         <div class="feat-title">Parte en Curso — varios días</div>
-        <p class="feat-text">Para reformas y obras largas. Vas añadiendo días con horas, materiales y desplazamiento. Al cerrar, genera el PDF consolidado con desglose por día</p>
+        <p class="feat-text">Para reformas y obras largas. Vas añadiendo días con horas, materiales, fotos y desplazamiento. Al cerrar, genera el PDF consolidado con desglose por día</p>
       </div>
       <div class="feat-card reveal">
-        <span class="feat-num">08</span>
+        <span class="feat-num">10</span>
         <span class="feat-icon">📶</span>
         <div class="feat-title">Funciona 100% sin internet</div>
         <p class="feat-text">Crea partes, fotos, presupuestos, firmas y PDFs completamente offline. En una obra no hay WiFi — PartePro funciona igual. Se sincroniza cuando tengas conexión</p>
@@ -997,10 +1015,10 @@ footer .footer-logo span { color: var(--green); }
         <ul class="price-features">
           <li>Hasta 30 partes de trabajo</li>
           <li>Hasta 30 presupuestos</li>
-          <li>Hasta 5 fotos por parte</li>
+          <li>Hasta 5 fotos por parte (durante y al cerrar)</li>
           <li>PDF profesional con firma digital</li>
           <li>WhatsApp y Email</li>
-          <li>Control de cobros ilimitado</li>
+          <li>Control de cobros con sem&#xE1;foro</li>
           <li>Funciona 100% sin internet</li>
         </ul>
         <a href="https://app.partepro.com" class="btn-price-free">Empezar gratis</a>
@@ -1016,10 +1034,11 @@ footer .footer-logo span { color: var(--green); }
         <ul class="price-features">
           <li>Partes y presupuestos ilimitados</li>
           <li>Todo lo del plan Freemium</li>
+          <li>Cobrar Ahora: link de pago por WhatsApp</li>
           <li>Cobro con tarjeta, SEPA, Bizum, transferencia</li>
-          <li>Recordatorios automáticos por WhatsApp</li>
+          <li>Mandato SEPA digital con firma eIDAS</li>
+          <li>Alertas y recordatorios autom&#xE1;ticos</li>
           <li>Soporte prioritario por WhatsApp</li>
-          <li>Acceso anticipado a funciones nuevas</li>
         </ul>
         <a href="https://buy.stripe.com/14A6oJ614dn41Vq8EX1VK00" class="btn-price-main">Suscribirme por 7,99€/mes →</a>
         <p style="text-align:center;font-size:12px;color:rgba(255,255,255,.5);margin-top:10px">Precio bloqueado para siempre</p>
@@ -1263,6 +1282,40 @@ footer .footer-logo span { color: var(--green); }
   </div>
 </section>
 
+<!-- BLOG -->
+<section class="features-section" id="blog">
+  <div class="container">
+    <p class="section-label">Blog</p>
+    <h2 class="section-title reveal">Consejos para aut&#xF3;nomos<br>que trabajan en serio</h2>
+    <p class="section-sub reveal">Gu&#xED;as pr&#xE1;cticas, trucos de gesti&#xF3;n y todo lo que necesitas para cobrar m&#xE1;s y trabajar menos</p>
+    <div class="features-grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));margin-top:32px">
+      <a href="/blog/parte-de-trabajo-que-es" class="feat-card reveal" style="text-decoration:none;cursor:pointer;transition:transform .2s">
+        <span class="feat-icon">&#x1F4DD;</span>
+        <div class="feat-title">&#xBF;Qu&#xE9; es un parte de trabajo y por qu&#xE9; lo necesitas?</div>
+        <p class="feat-text">Todo lo que necesitas saber sobre partes de trabajo: qu&#xE9; son, para qu&#xE9; sirven y c&#xF3;mo hacerlos bien desde el m&#xF3;vil</p>
+      </a>
+      <a href="/blog/cobrar-clientes-autonomo" class="feat-card reveal" style="text-decoration:none;cursor:pointer;transition:transform .2s">
+        <span class="feat-icon">&#x1F4B0;</span>
+        <div class="feat-title">C&#xF3;mo cobrar m&#xE1;s r&#xE1;pido siendo aut&#xF3;nomo</div>
+        <p class="feat-text">5 estrategias reales para reducir la morosidad y que tus clientes te paguen a tiempo sin perseguirles</p>
+      </a>
+      <a href="/blog/firma-digital-autonomos" class="feat-card reveal" style="text-decoration:none;cursor:pointer;transition:transform .2s">
+        <span class="feat-icon">&#x270D;&#xFE0F;</span>
+        <div class="feat-title">Firma digital para aut&#xF3;nomos: gu&#xED;a completa</div>
+        <p class="feat-text">C&#xF3;mo usar la firma digital en tus partes de trabajo para evitar problemas y dar una imagen profesional</p>
+      </a>
+      <a href="/blog/sepa-domiciliacion-autonomos" class="feat-card reveal" style="text-decoration:none;cursor:pointer;transition:transform .2s">
+        <span class="feat-icon">&#x1F3DB;&#xFE0F;</span>
+        <div class="feat-title">Domiciliaci&#xF3;n SEPA para aut&#xF3;nomos: cobra sin esfuerzo</div>
+        <p class="feat-text">Qu&#xE9; es la domiciliaci&#xF3;n SEPA, c&#xF3;mo funciona el mandato digital y por qu&#xE9; es la mejor forma de cobrar trabajos recurrentes</p>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <a href="/blog" style="font-size:15px;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:2px solid var(--green);padding-bottom:2px">Ver todos los art&#xED;culos &#x2192;</a>
+    </div>
+  </div>
+</section>
+
 <!-- CTA FINAL -->
 <section class="cta-section">
   <div class="container" style="position:relative;z-index:1;text-align:center">
@@ -1280,8 +1333,10 @@ footer .footer-logo span { color: var(--green); }
   <p style="margin-bottom:8px">El parte de trabajo profesional para autónomos</p>
   <p><a href="/cdn-cgi/l/email-protection#92fbfcf4fdd2e2f3e0e6f7e2e0fdbcf1fdff" style="color:rgba(255,255,255,.5)"><span class="__cf_email__" data-cfemail="573e3931381727362523322725387934383a">[email&#160;protected]</span></a> · <a href="https://partepro.com" style="color:rgba(255,255,255,.5)">partepro.com</a></p>
   <p style="margin-top:16px;font-size:12px;opacity:.7">
+    <a href="/blog" style="color:rgba(255,255,255,.5);text-decoration:none">Blog</a>
+    &nbsp;&#xB7;&nbsp;
     <a href="/aviso-legal" style="color:rgba(255,255,255,.5);text-decoration:none">Aviso Legal</a>
-    &nbsp;·&nbsp;
+    &nbsp;&#xB7;&nbsp;
     <a href="/privacidad" style="color:rgba(255,255,255,.5);text-decoration:none">Política de Privacidad</a>
     &nbsp;·&nbsp;
     <a href="/terminos" style="color:rgba(255,255,255,.5);text-decoration:none">Términos y Condiciones</a>
