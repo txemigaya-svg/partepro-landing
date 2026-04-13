@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Blog de PartePro: gu&#xED;as pr&#xE1;cticas para aut&#xF3;nomos. Partes de trabajo, cobros, firma digital, SEPA y m&#xE1;s. Consejos reales para cobrar m&#xE1;s r&#xE1;pido y trabajar mejor.">
+<meta property="og:title" content="Blog PartePro &#x2014; Consejos para aut&#xF3;nomos">
+<meta property="og:description" content="Gu&#xED;as pr&#xE1;cticas, trucos de gesti&#xF3;n y todo lo que necesitas para cobrar m&#xE1;s y trabajar menos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://partepro.com/blog">
+<meta property="og:site_name" content="PartePro">
+<link rel="canonical" href="https://partepro.com/blog">
+<title>Blog PartePro &#x2014; Consejos para aut&#xF3;nomos que trabajan en serio</title>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6JBB8KWGTL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6JBB8KWGTL');
+</script>
+<!-- Google Ads tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18084648074"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18084648074');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1E3A6E;
+  --green: #2ECC71;
+  --green-dark: #27ae60;
+  --bg: #F5F7FA;
+  --white: #FFFFFF;
+  --tx: #0F1923;
+  --tx2: #5A6A7E;
+  --bor: #E0E6EF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--white); color: var(--tx); }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 16px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bor);
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: var(--navy); text-decoration: none; }
+.logo span { color: var(--green); }
+.nav-cta {
+  background: var(--navy); color: #fff;
+  padding: 10px 22px; border-radius: 100px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none; transition: background .2s;
+}
+.nav-cta:hover { background: #162d57; }
+
+.hero-blog {
+  padding: 140px 24px 60px;
+  text-align: center;
+  background: linear-gradient(160deg, #f0f4ff 0%, #ffffff 50%, #f0faf5 100%);
+}
+.hero-blog h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+.hero-blog p {
+  font-size: 18px;
+  color: var(--tx2);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.articles {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+  display: grid;
+  gap: 32px;
+}
+.article-card {
+  display: flex;
+  gap: 28px;
+  padding: 32px;
+  background: var(--white);
+  border: 1px solid var(--bor);
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all .2s;
+}
+.article-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 8px 32px rgba(30,58,110,.08);
+  transform: translateY(-2px);
+}
+.article-icon {
+  font-size: 40px;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(46,204,113,.08);
+  border-radius: 14px;
+}
+.article-body { flex: 1; }
+.article-body .tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--green);
+  margin-bottom: 8px;
+}
+.article-body h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.article-body p {
+  font-size: 15px;
+  color: var(--tx2);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.read-more {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 2px;
+}
+
+@media (max-width: 600px) {
+  .article-card { flex-direction: column; gap: 16px; padding: 24px; }
+  .article-icon { width: 48px; height: 48px; font-size: 28px; }
+}
+
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.6);
+  padding: 40px 24px;
+  text-align: center;
+  font-size: 13px;
+}
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 800; color: #fff; display: block; margin-bottom: 10px; }
+.footer-logo span { color: var(--green); }
+footer a { color: rgba(255,255,255,.5); text-decoration: none; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog PartePro",
+  "description": "Gu\u00edas pr\u00e1cticas para aut\u00f3nomos: partes de trabajo, cobros, firma digital, SEPA",
+  "url": "https://partepro.com/blog",
+  "publisher": {
+    "@type": "Organization",
+    "name": "PartePro",
+    "url": "https://partepro.com"
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "\u00bfQu\u00e9 es un parte de trabajo y por qu\u00e9 lo necesitas?",
+      "url": "https://partepro.com/blog/parte-de-trabajo-que-es",
+      "datePublished": "2026-04-14"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "C\u00f3mo cobrar m\u00e1s r\u00e1pido siendo aut\u00f3nomo",
+      "url": "https://partepro.com/blog/cobrar-clientes-autonomo",
+      "datePublished": "2026-04-14"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Firma digital para aut\u00f3nomos: gu\u00eda completa",
+      "url": "https://partepro.com/blog/firma-digital-autonomos",
+      "datePublished": "2026-04-14"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Domiciliaci\u00f3n SEPA para aut\u00f3nomos: cobra sin esfuerzo",
+      "url": "https://partepro.com/blog/sepa-domiciliacion-autonomos",
+      "datePublished": "2026-04-14"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Parte<span>Pro</span></a>
+  <a href="https://app.partepro.com" class="nav-cta">Probar gratis</a>
+</nav>
+
+<div class="hero-blog">
+  <h1>Consejos para aut&#xF3;nomos<br>que trabajan en serio</h1>
+  <p>Gu&#xED;as pr&#xE1;cticas, trucos de gesti&#xF3;n y todo lo que necesitas para cobrar m&#xE1;s y trabajar menos</p>
+</div>
+
+<div class="articles">
+
+  <a href="/blog/parte-de-trabajo-que-es" class="article-card">
+    <div class="article-icon">&#x1F4DD;</div>
+    <div class="article-body">
+      <div class="tag">Gesti&#xF3;n</div>
+      <h2>&#xBF;Qu&#xE9; es un parte de trabajo y por qu&#xE9; lo necesitas?</h2>
+      <p>Todo lo que necesitas saber sobre partes de trabajo: qu&#xE9; son, para qu&#xE9; sirven, qu&#xE9; informaci&#xF3;n deben incluir y c&#xF3;mo hacerlos desde el m&#xF3;vil en 30 segundos.</p>
+      <span class="read-more">Leer art&#xED;culo &#x2192;</span>
+    </div>
+  </a>
+
+  <a href="/blog/cobrar-clientes-autonomo" class="article-card">
+    <div class="article-icon">&#x1F4B0;</div>
+    <div class="article-body">
+      <div class="tag">Cobros</div>
+      <h2>C&#xF3;mo cobrar m&#xE1;s r&#xE1;pido siendo aut&#xF3;nomo</h2>
+      <p>5 estrategias reales para reducir la morosidad y que tus clientes te paguen a tiempo sin tener que perseguirles cada mes.</p>
+      <span class="read-more">Leer art&#xED;culo &#x2192;</span>
+    </div>
+  </a>
+
+  <a href="/blog/firma-digital-autonomos" class="article-card">
+    <div class="article-icon">&#x270D;&#xFE0F;</div>
+    <div class="article-body">
+      <div class="tag">Legal</div>
+      <h2>Firma digital para aut&#xF3;nomos: gu&#xED;a completa</h2>
+      <p>C&#xF3;mo usar la firma digital en tus partes de trabajo para dar una imagen profesional y evitar problemas legales.</p>
+      <span class="read-more">Leer art&#xED;culo &#x2192;</span>
+    </div>
+  </a>
+
+  <a href="/blog/sepa-domiciliacion-autonomos" class="article-card">
+    <div class="article-icon">&#x1F3DB;&#xFE0F;</div>
+    <div class="article-body">
+      <div class="tag">Pagos</div>
+      <h2>Domiciliaci&#xF3;n SEPA para aut&#xF3;nomos: cobra sin esfuerzo</h2>
+      <p>Qu&#xE9; es la domiciliaci&#xF3;n SEPA, c&#xF3;mo funciona el mandato digital y por qu&#xE9; es la mejor forma de cobrar trabajos recurrentes.</p>
+      <span class="read-more">Leer art&#xED;culo &#x2192;</span>
+    </div>
+  </a>
+
+</div>
+
+<footer>
+  <span class="footer-logo">Parte<span>Pro</span></span>
+  <p style="margin-bottom:8px">El parte de trabajo profesional para aut&#xF3;nomos</p>
+  <p>info@partepro.com &#xB7; <a href="https://partepro.com">partepro.com</a></p>
+  <p style="margin-top:16px;font-size:12px;opacity:.7">
+    <a href="/blog">Blog</a>
+    &nbsp;&#xB7;&nbsp;
+    <a href="/aviso-legal">Aviso Legal</a>
+    &nbsp;&#xB7;&nbsp;
+    <a href="/privacidad">Pol&#xED;tica de Privacidad</a>
+    &nbsp;&#xB7;&nbsp;
+    <a href="/terminos">T&#xE9;rminos y Condiciones</a>
+    &nbsp;&#xB7;&nbsp;
+    <a href="/cookies">Pol&#xED;tica de Cookies</a>
+  </p>
+  <p style="margin-top:10px;font-size:11px;opacity:.4">&#xA9; 2026 PartePro &#xB7; Lleida</p>
+</footer>
+
+</body>
+</html>
