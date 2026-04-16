@@ -408,17 +408,51 @@ section { padding: 100px 24px; }
   margin-top: 56px;
   max-width: 1100px;
 }
-.pricing-grid-future {
+.pricing-grid-empresa {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 20px;
-  max-width: 740px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+  max-width: 1100px;
+}
+@media (max-width: 900px) {
+  .pricing-grid-empresa { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
   .pricing-grid { grid-template-columns: 1fr; }
-  .pricing-grid-future { grid-template-columns: 1fr; }
+  .pricing-grid-empresa { grid-template-columns: 1fr; }
 }
+.empresa-highlight {
+  background: linear-gradient(135deg, rgba(30,58,110,.04), rgba(46,204,113,.06));
+  border: 2px solid rgba(46,204,113,.2);
+  border-radius: 24px;
+  padding: 48px 36px;
+  margin-top: 56px;
+}
+.empresa-highlight .section-title { font-size: clamp(24px, 3.5vw, 38px); }
+.price-card-sm {
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--bor);
+  padding: 28px 24px;
+  position: relative;
+  transition: all .25s;
+}
+.price-card-sm:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,.08); }
+.price-card-sm.featured {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+.price-card-sm .price-name { font-size: 12px; }
+.price-card-sm .price-amount { font-size: 38px; }
+.price-personas { font-size: 13px; font-weight: 600; color: var(--green-dark); background: rgba(46,204,113,.1); border-radius: 8px; padding: 4px 10px; display: inline-block; margin-bottom: 12px; }
+.price-card-sm.featured .price-personas { background: rgba(46,204,113,.2); color: #7dffb8; }
+.price-features-sm { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+.price-features-sm li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--tx2); }
+.price-card-sm.featured .price-features-sm li { color: rgba(255,255,255,.8); }
+.price-features-sm li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+.annual-note { text-align: center; margin-top: 20px; font-size: 14px; color: var(--tx2); background: rgba(255,255,255,.7); border-radius: 12px; padding: 12px 20px; }
 .price-card {
   background: var(--white);
   border-radius: 24px;
@@ -630,10 +664,38 @@ footer .footer-logo span { color: var(--green); }
         },
         {
           "@type": "Offer",
-          "name": "Pro Founders",
+          "name": "Plan A - Aut\u00f3nomo Founders",
           "price": "7.99",
           "priceCurrency": "EUR",
-          "description": "Partes y presupuestos ilimitados, cobros con tarjeta y SEPA, recordatorios automáticos"
+          "description": "1 persona. Partes y presupuestos ilimitados, cobros con tarjeta y SEPA"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plan B1 - Starter Founders",
+          "price": "19.99",
+          "priceCurrency": "EUR",
+          "description": "3 personas (1 admin + 2 t\u00e9cnicos). Dashboard admin, asignaci\u00f3n de trabajos"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plan B2 - Growth Founders",
+          "price": "34.99",
+          "priceCurrency": "EUR",
+          "description": "6 personas (1 admin + 5 t\u00e9cnicos). Estad\u00edsticas, notificaciones en tiempo real"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plan B3 - Business Founders",
+          "price": "54.99",
+          "priceCurrency": "EUR",
+          "description": "11 personas (1 admin + 10 t\u00e9cnicos). Gesti\u00f3n avanzada de equipo"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plan B4 - Enterprise Founders",
+          "price": "79.99",
+          "priceCurrency": "EUR",
+          "description": "T\u00e9cnicos ilimitados. Onboarding personalizado, soporte dedicado"
         }
       ],
       "aggregateRating": {
@@ -711,7 +773,7 @@ footer .footer-logo span { color: var(--green); }
           "name": "¿Cuánto cuesta PartePro?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PartePro tiene un plan gratuito con hasta 30 partes y 30 presupuestos. El plan Pro Founders cuesta 7,99€/mes (IVA incluido) con precio bloqueado para siempre, e incluye partes ilimitados, cobro con tarjeta, SEPA y Bizum, y recordatorios automáticos por WhatsApp."
+            "text": "PartePro tiene un plan gratuito con hasta 30 partes y 30 presupuestos. El Plan A (Aut\u00f3nomo) Founders cuesta 7,99\u20ac/mes (IVA incluido) con precio bloqueado para siempre. Para empresas con t\u00e9cnicos, los Planes Empresa van desde 19,99\u20ac/mes (3 personas) hasta 79,99\u20ac/mes (ilimitados). Todos incluyen dashboard admin, asignaci\u00f3n de trabajos y fotos en la nube."
           }
         }
       ]
@@ -999,25 +1061,26 @@ footer .footer-logo span { color: var(--green); }
   <div class="container">
     <p class="section-label">Precios</p>
     <h2 class="section-title reveal">Empieza gratis<br>Crece cuando quieras</h2>
-    <p class="section-sub reveal">Sin permanencia. Sin letra pequeña. <strong>El precio que eliges hoy es el que pagas para siempre</strong> mientras no te des de baja</p>
+    <p class="section-sub reveal">Sin permanencia. Sin letra peque&#xF1;a. <strong>El precio Founders queda bloqueado para siempre</strong> mientras no te des de baja</p>
 
     <!-- PRECIO PARA SIEMPRE BANNER -->
     <div style="grid-column:1/-1;background:linear-gradient(135deg,rgba(30,58,110,.06),rgba(46,204,113,.08));border:2px solid rgba(46,204,113,.3);border-radius:16px;padding:24px 28px;font-size:15px;color:var(--tx);display:flex;align-items:center;gap:16px;margin-top:40px;max-width:1100px">
-      <span style="font-size:32px;flex-shrink:0">🔒</span>
-      <div><strong style="color:var(--navy);font-size:17px">Tu precio queda bloqueado para siempre.</strong><br>Da igual que mañana subamos a 14,99€ o a 29,99€. Si entras ahora, pagas lo de ahora. Para toda la vida. Sin truco, sin letra pequeña. Si te das de baja y vuelves, pagarás el precio vigente en ese momento</div>
+      <span style="font-size:32px;flex-shrink:0">&#x1F512;</span>
+      <div><strong style="color:var(--navy);font-size:17px">Tu precio queda bloqueado para siempre.</strong><br>Da igual que ma&#xF1;ana subamos los precios. Si entras ahora como Founder, pagas lo de ahora. Para toda la vida. Sin truco, sin letra peque&#xF1;a. Facturaci&#xF3;n anual: paga 10 meses, disfruta 12</div>
     </div>
 
-    <div class="pricing-grid" style="margin-top:32px">
+    <!-- PLAN AUTÓNOM: Freemium + Plan A -->
+    <div class="pricing-grid" style="margin-top:32px;grid-template-columns:repeat(2,1fr);max-width:740px">
       <!-- FREEMIUM -->
       <div class="price-card reveal">
         <div class="price-name">Freemium</div>
-        <div class="price-amount">0€</div>
+        <div class="price-amount">0&#x20AC;</div>
         <div class="price-period">para siempre</div>
-        <p style="font-size:13px;color:var(--green-dark);font-weight:600;margin-bottom:16px;background:rgba(46,204,113,.08);padding:8px 12px;border-radius:8px;text-align:center">Todas las funciones del plan Pro, limitado a 30 partes</p>
+        <p style="font-size:13px;color:var(--green-dark);font-weight:600;margin-bottom:16px;background:rgba(46,204,113,.08);padding:8px 12px;border-radius:8px;text-align:center">Todas las funciones Pro, limitado a 30 partes</p>
         <ul class="price-features">
           <li>Hasta 30 partes de trabajo</li>
           <li>Hasta 30 presupuestos</li>
-          <li>Hasta 5 fotos por parte (durante y al cerrar)</li>
+          <li>Fotos de obra (hasta 5 por parte)</li>
           <li>PDF profesional con firma digital</li>
           <li>WhatsApp y Email</li>
           <li>Control de cobros con sem&#xE1;foro</li>
@@ -1026,13 +1089,14 @@ footer .footer-logo span { color: var(--green); }
         <a href="https://app.partepro.com" class="btn-price-free">Empezar gratis</a>
       </div>
 
-      <!-- FOUNDERS -->
+      <!-- PLAN A: AUTÒNOM -->
       <div class="price-card featured reveal">
-        <div class="price-badge">🔥 Founders — Quedan pocas plazas de 50</div>
-        <div class="price-name">Pro · Founders</div>
-        <div class="price-old">14,99€/mes</div>
-        <div class="price-amount">7,99€</div>
-        <div class="price-period">/mes (IVA incl.) · <strong>para siempre</strong></div>
+        <div class="price-badge">&#x1F525; Founders &#x2014; Precio bloqueado para siempre</div>
+        <div class="price-name">Plan A &#xB7; Aut&#xF3;nomo</div>
+        <div class="price-personas">1 persona</div>
+        <div class="price-old">9,99&#x20AC;/mes</div>
+        <div class="price-amount">7,99&#x20AC;</div>
+        <div class="price-period">/mes (IVA incl.) &#xB7; <strong>para siempre</strong></div>
         <ul class="price-features">
           <li>Partes y presupuestos ilimitados</li>
           <li>Todo lo del plan Freemium</li>
@@ -1042,66 +1106,115 @@ footer .footer-logo span { color: var(--green); }
           <li>Alertas y recordatorios autom&#xE1;ticos</li>
           <li>Soporte prioritario por WhatsApp</li>
         </ul>
-        <a href="https://buy.stripe.com/14A6oJ614dn41Vq8EX1VK00" class="btn-price-main">Suscribirme por 7,99€/mes →</a>
-        <p style="text-align:center;font-size:12px;color:rgba(255,255,255,.5);margin-top:10px">Precio bloqueado para siempre</p>
+        <a href="https://buy.stripe.com/14A6oJ614dn41Vq8EX1VK00" class="btn-price-main">Suscribirme por 7,99&#x20AC;/mes &#x2192;</a>
+        <p style="text-align:center;font-size:12px;color:rgba(255,255,255,.5);margin-top:10px">Precio p&#xFA;blico: 9,99&#x20AC;/mes</p>
+      </div>
+    </div><!-- end pricing autonomo -->
+
+    <!-- PLANS EMPRESA B1-B4 -->
+    <div class="empresa-highlight reveal" id="empresa">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+        <span style="font-size:28px">&#x1F3E2;</span>
+        <p class="section-label" style="margin-bottom:0">Plans Empresa</p>
+      </div>
+      <h2 class="section-title" style="margin-bottom:12px">&#xBF;Tienes t&#xE9;cnicos a tu cargo?<br>Gestiona todo tu equipo desde una sola app</h2>
+      <p class="section-sub" style="margin-bottom:8px">Dashboard con vista global de todos los partes, asignaci&#xF3;n de trabajos en tiempo real, sem&#xE1;foro de estados y estad&#xED;sticas del equipo. Cada t&#xE9;cnico usa su propio m&#xF3;vil &#x2014; t&#xFA; lo controlas todo</p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 28px">
+        <span style="background:rgba(46,204,113,.1);color:var(--green-dark);font-size:13px;font-weight:600;padding:6px 14px;border-radius:100px">&#x2713; Dashboard admin</span>
+        <span style="background:rgba(46,204,113,.1);color:var(--green-dark);font-size:13px;font-weight:600;padding:6px 14px;border-radius:100px">&#x2713; Asignar trabajos</span>
+        <span style="background:rgba(46,204,113,.1);color:var(--green-dark);font-size:13px;font-weight:600;padding:6px 14px;border-radius:100px">&#x2713; Fotos en la nube</span>
+        <span style="background:rgba(46,204,113,.1);color:var(--green-dark);font-size:13px;font-weight:600;padding:6px 14px;border-radius:100px">&#x2713; Sem&#xE1;foro de estado</span>
+        <span style="background:rgba(46,204,113,.1);color:var(--green-dark);font-size:13px;font-weight:600;padding:6px 14px;border-radius:100px">&#x2713; Estad&#xED;stiques</span>
+        <span style="background:rgba(46,204,113,.1);color:var(--green-dark);font-size:13px;font-weight:600;padding:6px 14px;border-radius:100px">&#x2713; Cobros centralizados</span>
       </div>
 
-      <!-- EARLY BIRD -->
-      <div class="price-card reveal" style="opacity:.75;position:relative">
-        <div style="position:absolute;top:16px;right:16px;background:#E8EEF8;color:var(--navy);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px">PRÓXIMAMENTE</div>
-        <div class="price-name">Pro · Early Bird</div>
-        <div class="price-old">14,99€/mes</div>
-        <div class="price-amount">9,99€</div>
-        <div class="price-period">/mes (IVA incl.) · <strong>para siempre</strong></div>
-        <ul class="price-features">
-          <li>Todo lo del plan Founders</li>
-          <li>Plazas 51–150</li>
-          <li>Mismo producto, mismo servicio</li>
-          <li>Pero 2€/mes más caro</li>
-        </ul>
-        <div class="btn-price-free" style="pointer-events:none;opacity:.5;text-align:center">Disponible cuando se agoten los Founders</div>
+      <div class="pricing-grid-empresa">
+        <!-- B1: STARTER -->
+        <div class="price-card-sm reveal">
+          <div class="price-name">B1 &#xB7; STARTER</div>
+          <div class="price-personas">3 personas</div>
+          <p style="font-size:12px;color:var(--tx2);margin-bottom:12px">1 admin + 2 t&#xE9;cnicos</p>
+          <div class="price-old" style="font-size:13px">24,99&#x20AC;/mes</div>
+          <div class="price-amount">19,99&#x20AC;</div>
+          <div class="price-period">/mes (IVA incl.)</div>
+          <ul class="price-features-sm">
+            <li>Todo lo del Plan A</li>
+            <li>Dashboard admin con KPIs</li>
+            <li>Asignar trabajos a t&#xE9;cnicos</li>
+            <li>Fotos en la nube (Cloudflare R2)</li>
+            <li>Sem&#xE1;foro de estado por t&#xE9;cnico</li>
+          </ul>
+          <a href="https://app.partepro.com" class="btn-price-free" style="font-size:14px;padding:12px">Probar gratis</a>
+          <p style="text-align:center;font-size:11px;color:var(--tx2);margin-top:8px">6,66&#x20AC;/persona</p>
+        </div>
+
+        <!-- B2: GROWTH (FEATURED) -->
+        <div class="price-card-sm featured reveal">
+          <div class="price-badge" style="font-size:11px;padding:4px 14px">&#x2B50; M&#xC1;S POPULAR</div>
+          <div class="price-name">B2 &#xB7; GROWTH</div>
+          <div class="price-personas">6 personas</div>
+          <p style="font-size:12px;color:rgba(255,255,255,.6);margin-bottom:12px">1 admin + 5 t&#xE9;cnicos</p>
+          <div class="price-old" style="font-size:13px;color:rgba(255,255,255,.5)">44,99&#x20AC;/mes</div>
+          <div class="price-amount" style="color:#fff">34,99&#x20AC;</div>
+          <div class="price-period" style="color:rgba(255,255,255,.6)">/mes (IVA incl.)</div>
+          <ul class="price-features-sm">
+            <li>Todo lo del B1 Starter</li>
+            <li>Estad&#xED;sticas por t&#xE9;cnico</li>
+            <li>Top clientes y facturaci&#xF3;n</li>
+            <li>Notificaciones en tiempo real</li>
+            <li>Soporte prioritario</li>
+          </ul>
+          <a href="https://app.partepro.com" class="btn-price-main" style="font-size:14px;padding:12px">Probar gratis &#x2192;</a>
+          <p style="text-align:center;font-size:11px;color:rgba(255,255,255,.5);margin-top:8px">5,83&#x20AC;/persona</p>
+        </div>
+
+        <!-- B3: BUSINESS -->
+        <div class="price-card-sm reveal">
+          <div class="price-name">B3 &#xB7; BUSINESS</div>
+          <div class="price-personas">11 personas</div>
+          <p style="font-size:12px;color:var(--tx2);margin-bottom:12px">1 admin + 10 t&#xE9;cnicos</p>
+          <div class="price-old" style="font-size:13px">69,99&#x20AC;/mes</div>
+          <div class="price-amount">54,99&#x20AC;</div>
+          <div class="price-period">/mes (IVA incl.)</div>
+          <ul class="price-features-sm">
+            <li>Todo lo del B2 Growth</li>
+            <li>Gesti&#xF3;n avanzada d'equip</li>
+            <li>Cobros centralizats</li>
+            <li>Historial complet per t&#xE8;cnic</li>
+            <li>Soporte premium</li>
+          </ul>
+          <a href="https://app.partepro.com" class="btn-price-free" style="font-size:14px;padding:12px">Probar gratis</a>
+          <p style="text-align:center;font-size:11px;color:var(--tx2);margin-top:8px">5,00&#x20AC;/persona</p>
+        </div>
+
+        <!-- B4: ENTERPRISE -->
+        <div class="price-card-sm reveal">
+          <div class="price-name">B4 &#xB7; ENTERPRISE</div>
+          <div class="price-personas">&#x221E; personas</div>
+          <p style="font-size:12px;color:var(--tx2);margin-bottom:12px">Sin l&#xED;mite de t&#xE9;cnicos</p>
+          <div class="price-old" style="font-size:13px">99,99&#x20AC;/mes</div>
+          <div class="price-amount">79,99&#x20AC;</div>
+          <div class="price-period">/mes (IVA incl.)</div>
+          <ul class="price-features-sm">
+            <li>Todo lo del B3 Business</li>
+            <li>T&#xE9;cnicos ilimitados</li>
+            <li>Onboarding personalizado</li>
+            <li>Soporte dedicado</li>
+            <li>Facturaci&#xF3;n personalizada</li>
+          </ul>
+          <a href="https://app.partepro.com" class="btn-price-free" style="font-size:14px;padding:12px">Contactar</a>
+          <p style="text-align:center;font-size:11px;color:var(--tx2);margin-top:8px">El mejor precio por persona</p>
+        </div>
       </div>
 
-    </div><!-- end pricing-grid -->
-
-    <!-- FILA 2: Plans futurs -->
-    <div class="pricing-grid-future">
-      <!-- EARLY ADOPTER -->
-      <div class="price-card reveal" style="opacity:.55;position:relative">
-        <div style="position:absolute;top:16px;right:16px;background:#E8EEF8;color:var(--navy);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px">PRÓXIMAMENTE</div>
-        <div class="price-name">Pro · Early Adopter</div>
-        <div class="price-old">14,99€/mes</div>
-        <div class="price-amount">12,99€</div>
-        <div class="price-period">/mes (IVA incl.) · <strong>para siempre</strong></div>
-        <ul class="price-features">
-          <li>Todo lo del plan Founders</li>
-          <li>Plazas 151–300</li>
-          <li>Mismo producto, mismo servicio</li>
-          <li>Pero 5€/mes más caro</li>
-        </ul>
-        <div class="btn-price-free" style="pointer-events:none;opacity:.5;text-align:center">Disponible más adelante</div>
-      </div>
-
-      <!-- STANDARD -->
-      <div class="price-card reveal" style="opacity:.4;position:relative">
-        <div style="position:absolute;top:16px;right:16px;background:#E8EEF8;color:var(--navy);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px">PRECIO FINAL</div>
-        <div class="price-name">Pro · Standard</div>
-        <div class="price-amount">14,99€</div>
-        <div class="price-period">/mes (IVA incl.) · <strong>para siempre</strong></div>
-        <ul class="price-features">
-          <li>Todo lo del plan Founders</li>
-          <li>Plazas 300+</li>
-          <li>Mismo producto, mismo servicio</li>
-          <li>Pero 7€/mes más caro</li>
-        </ul>
-        <div class="btn-price-free" style="pointer-events:none;opacity:.5;text-align:center">Precio estándar definitivo</div>
-      </div>
-    </div><!-- end pricing-grid-future -->
+      <div class="annual-note">&#x1F4C5; <strong>Facturaci&#xF3;n anual:</strong> Paga 10 meses, disfruta 12. Aplica a todos los planes Founders y P&#xFA;blico</div>
+    </div><!-- end empresa-highlight -->
 
     <!-- URGENCIA -->
     <div style="text-align:center;margin-top:32px;padding:20px;background:rgba(231,76,60,.06);border:1px solid rgba(231,76,60,.2);border-radius:14px;max-width:700px;margin-left:auto;margin-right:auto">
-      <p style="font-size:16px;font-weight:700;color:var(--red);margin-bottom:6px">El precio sube con cada fase. No baja nunca.</p>
-      <p style="font-size:14px;color:var(--tx2)">Los primeros 50 pagan 7,99€ para siempre. Los siguientes 100 pagarán 9,99€. Después 12,99€. Y finalmente el precio estándar: 14,99€/mes. <strong>Cuanto antes entres, menos pagas — para toda la vida.</strong></p>
+      <p style="font-size:16px;font-weight:700;color:var(--red);margin-bottom:6px">Precios Founders: para los primeros. Despu&#xE9;s suben.</p>
+      <p style="font-size:14px;color:var(--tx2)">Los precios Founders (7,99&#x20AC; &#x2013; 79,99&#x20AC;) quedan bloqueados para siempre. El precio p&#xFA;blico ser&#xE1; entre un 25-30% m&#xE1;s caro. <strong>Cuanto antes entres, menos pagas &#x2014; para toda la vida.</strong></p>
     </div>
   </div>
 </section>
@@ -1275,10 +1388,10 @@ footer .footer-logo span { color: var(--green); }
       </div>
       <div class="faq-item">
         <div class="faq-q">
-          ¿Puedo dar acceso a mis trabajadores?
+          &#xBF;Puedo dar acceso a mis trabajadores?
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-a">Todavía no, pero estamos trabajando en ello. Próximamente PartePro tendrá modo multiusuario: el autónomo o la empresa podrá crear cuentas para sus trabajadores, cada uno con su propio acceso desde su móvil. Tú verás todos los partes, presupuestos y cobros centralizados. Cada usuario adicional tendrá un coste aparte (precio por definir). Si eres Founder, tendrás acceso prioritario a esta función y condiciones especiales cuando se lance</div>
+        <div class="faq-a">&#xA1;S&#xED;! PartePro ya tiene modo multiusuario. Con los Planes Empresa (B1&#x2013;B4) puedes crear cuentas para tus t&#xE9;cnicos, cada uno con su propio acceso desde su m&#xF3;vil. T&#xFA; como admin ves todos los partes, presupuestos y cobros centralizados en un dashboard. Puedes asignar trabajos, ver el estado en tiempo real con sem&#xE1;foro, consultar estad&#xED;sticas por t&#xE9;cnico y gestionar fotos en la nube. Planes desde 19,99&#x20AC;/mes (Founders) para 3 personas</div>
       </div>
     </div>
   </div>
